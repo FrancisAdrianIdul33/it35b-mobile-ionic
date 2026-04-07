@@ -37,6 +37,8 @@ import Login from './pages/Login';
 import Menu from './pages/Menu';
 
 
+
+
 setupIonicReact();
 
 const App: React.FC = () => (
@@ -45,8 +47,8 @@ const App: React.FC = () => (
       <IonRouterOutlet>
 
      
-        <Route exact path="/" component={Login} />
-        <Route exact path="/app" component={Menu} />
+        <Route exact path ="/" component={Login} />
+        <Route path ="/app" component={Menu} />
        
 
       </IonRouterOutlet>
