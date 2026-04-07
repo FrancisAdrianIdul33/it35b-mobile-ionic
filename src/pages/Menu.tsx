@@ -1,4 +1,4 @@
-import { IonButtons, IonContent, IonHeader, IonMenu, IonMenuButton, IonPage, IonRouterOutlet, IonSplitPane, IonTitle, IonToolbar } from '@ionic/react';
+import { IonButton, IonButtons, IonContent, IonHeader, IonIcon, IonItem, IonMenu, IonMenuButton, IonMenuToggle, IonPage, IonRouterOutlet, IonSplitPane, IonTitle, IonToolbar } from '@ionic/react';
 import { } from 'react';
 import { Route } from 'react-router-dom';
 import { homeOutline, informationCircleOutline } from 'ionicons/icons';
@@ -29,6 +29,13 @@ const Menu: React.FC = () => {
                     </IonMenu>
 
                     <IonContent>
+                        {path.map((item, index) => (
+                         <IonMenuToggle key={index}>
+                            <IonItem>
+                            <IonIcon icon={item.icon}></IonIcon>                 
+                            </IonItem>
+                         </IonMenuToggle>
+                        ))}
                         
                         </IonContent>
 
