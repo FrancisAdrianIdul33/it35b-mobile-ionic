@@ -15,7 +15,10 @@ const About: React.FC = () => {
             </IonHeader>
 
             <IonContent fullscreen>
-                    <h1>About</h1>
+                   <div id="container">
+      <strong>About Me</strong>
+     
+    </div>
             </IonContent>
 
         </IonPage>
