@@ -1,32 +1,34 @@
 import { IonContent, IonHeader, IonMenuButton, IonPage, IonTitle, IonButtons, IonToolbar } from '@ionic/react';
 import './Home.css';
 import ExploreContainer from '../components/ExploreContainer';
+import { bookOutline, search, star } from 'ionicons/icons';
 
 
 const Home: React.FC = () => {
-  return (
-    <IonPage>
-      <IonHeader>
-        <IonToolbar>
-          <IonButtons slot="start">
-            <IonMenuButton></IonMenuButton>
-          </IonButtons>
-          <IonTitle>Home</IonTitle>
-        </IonToolbar>        
-        </IonHeader>
-        <IonContent fullscreen>
-          <IonHeader collapse="condense">
-            <IonToolbar>
-              <IonTitle size="large">Home</IonTitle>            
-            </IonToolbar>
-          </IonHeader>
+  const tabs = [
 
-          <ExploreContainer />
-        
-      
-        </IonContent>
+    {name: "Feed", tab:'feed',url:"/app/home/feed",icon:bookOutline},
+     {name: "Favorites", tab:'favorites',url:"/app/home/feed",icon:star},
+      {name: "Search", tab:'search',url:"/app/home/feed",icon:search}
+]
+
+
+  return 
+    <IonReactRouter>
+      <IonTabs>
+        <IonToolBar>
+          <IonTitle>
+            Tabs
+             </IonTitle>
+             </IonToolBar>
+               </IonToolBar>
+                 </IonTabs>
+                 
+    </IonReactRouter>
+
+            
+
   
-    </IonPage>
   );
 };
 
