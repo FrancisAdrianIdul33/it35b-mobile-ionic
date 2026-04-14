@@ -17,7 +17,6 @@ const Favorites: React.FC = () => {
             <IonContent fullscreen>
                 <h1>Favorites</h1>
             </IonContent>
-
         </IonPage>
 
     );
