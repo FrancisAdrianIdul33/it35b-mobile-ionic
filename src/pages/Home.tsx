@@ -4,9 +4,9 @@ import ExploreContainer from '../components/ExploreContainer';
 import { bookOutline, search, star } from 'ionicons/icons';
 import { IonReactRouter } from '@ionic/react-router';
 import { Redirect, Route } from 'react-router';
-import Feed from '../home-tabs/Feed';
-import Favorites from '../home-tabs/Favorites';
-import Search from '../home-tabs/Search';
+import Feed from '../home-tabs/feed';
+import Favorites from '../home-tabs/favorites';
+import Search from '../home-tabs/search';
 
 
 const Home: React.FC = () => {
