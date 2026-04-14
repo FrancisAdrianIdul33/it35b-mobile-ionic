@@ -1,0 +1,26 @@
+import { IonButtons, IonContent, IonHeader, IonMenuButton, IonPage, IonTitle, IonToolbar } from '@ionic/react';
+import { } from 'react';
+
+const Feed: React.FC = () => {
+    return (
+
+        <IonPage>
+            <IonHeader>
+                <IonToolbar>
+                    <IonButtons slot="start">
+                        <IonMenuButton></IonMenuButton>
+                    </IonButtons>
+                    <IonTitle>Feed</IonTitle>
+                </IonToolbar>
+            </IonHeader>
+
+            <IonContent fullscreen>
+                    <h1>Feed</h1>
+            </IonContent>
+
+        </IonPage>
+
+    );
+};
+
+export default Feed;
