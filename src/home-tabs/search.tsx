@@ -1,7 +1,7 @@
 import { IonButtons, IonContent, IonHeader, IonMenuButton, IonPage, IonTitle, IonToolbar } from '@ionic/react';
 import { } from 'react';
 
-const Template: React.FC = () => {
+const Search: React.FC = () => {
     return (
 
         <IonPage>
@@ -10,12 +10,12 @@ const Template: React.FC = () => {
                     <IonButtons slot="start">
                         <IonMenuButton></IonMenuButton>
                     </IonButtons>
-                    <IonTitle>Template</IonTitle>
+                    <IonTitle>Search</IonTitle>
                 </IonToolbar>
             </IonHeader>
 
             <IonContent fullscreen>
-                <h1>Template</h1>
+                <h1>Search</h1>
             </IonContent>
 
         </IonPage>
@@ -23,4 +23,4 @@ const Template: React.FC = () => {
     );
 };
 
-export default Template;
+export default Search;
