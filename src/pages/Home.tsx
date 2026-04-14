@@ -2,7 +2,6 @@ import { IonContent, IonHeader, IonMenuButton, IonPage, IonTitle, IonButtons, Io
 import './Home.css';
 import ExploreContainer from '../components/ExploreContainer';
 
-
 const Home: React.FC = () => {
   return (
     <IonPage>
