@@ -1,5 +1,5 @@
 import { IonButtons, IonContent, IonHeader, IonMenuButton, IonPage, IonTitle, IonToolbar, IonItem, IonLabel, IonList, IonCard, IonCardContent, IonCardHeader, IonCardSubtitle, IonCardTitle, IonGrid, IonCol, IonRow, IonIcon, IonButton } from '@ionic/react';
-import { chatboxOutline, gitCommitOutline, shareOutline, thumbsUpOutline } from 'ionicons/icons';
+import { chatboxOutline, chatbubblesOutline, gitCommitOutline, shareOutline, thumbsUpOutline } from 'ionicons/icons';
 import { useInsertionEffect, useState } from 'react';
 
 const Feed: React.FC = () => {
@@ -48,52 +48,46 @@ const Feed: React.FC = () => {
             <IonContent className='ion-padding'>
                 <IonList>
                     {games.map((item, index) => (
-                        <IonCardHeader>
+                        <IonCard>
                             <img alt="Card Image" src={item.img || "https://ionicframework.com/docs/img/demos/card-media.png"} />
                             <IonCardHeader>
                                 <IonCardTitle>{item.name}</IonCardTitle>
                                 <IonCardSubtitle>{item.des}</IonCardSubtitle>
                             </IonCardHeader>
 
+                            <IonGrid>
+                                <IonRow>
 
-                            <IonCardContent>
-                                <IonGrid>
-                                    <IonRow>
-                                        <IonCol>
-                                            <IonButton fill="clear" expand="full">
-                                                <IonIcon icon={thumbsUpOutline}></IonIcon>
-                                                <IonLabel style={{ marginLeft: '5px' }}>Like</IonLabel>
-                                            </IonButton>
-                                        </IonCol>
-                                        <IonCol>
-                                            <IonButton fill="clear" expand="full">
-                                                <IonIcon icon={chatboxOutline}></IonIcon>
-                                                <IonLabel style={{ marginLeft: '5px' }}>Comment</IonLabel>
-                                            </IonButton>
-                                        </IonCol>
-                                        <IonCol>
-                                            <IonButton fill="clear" expand="full">
-                                                <IonIcon icon={shareOutline}></IonIcon>
-                                                <IonLabel style={{ marginLeft: '5px' }}>Share</IonLabel>
-                                            </IonButton>
-                                        </IonCol>
-                                    </IonRow>
-                                </IonGrid>
-                            </IonCardContent>
-                        </IonCardHeader>
+                                    <IonCol>
+                                        <IonButton fill="clear" expand="full">
+                                            <IonIcon icon={thumbsUpOutline} ></IonIcon>
+                                            <IonLabel style={{ marginLeft: "5px" }}>Like</IonLabel>
+                                        </IonButton>
+                                    </IonCol>
+
+                                    <IonCol>
+                                        <IonButton fill="clear" expand="full">
+                                            <IonIcon icon={chatbubblesOutline}></IonIcon>
+                                            <IonLabel style={{ marginLeft: "5px" }}>Comment</IonLabel>
+                                        </IonButton>
+                                    </IonCol>
+
+                                    <IonCol>
+                                        <IonButton fill="clear" expand="full">
+                                            <IonIcon icon={shareOutline}></IonIcon>
+                                            <IonLabel style={{ marginLeft: "5px" }}>Share</IonLabel>
+                                        </IonButton>
+                                    </IonCol>
+                                </IonRow>
+                            </IonGrid>
+                        </IonCard>
 
                     ))}
                 </IonList>
             </IonContent>
         </IonPage>
 
-
-
     );
 };
 
 export default Feed;
-
-function setFilterGames(filtered: { name: string; }[]) {
-    throw new Error('Function not implemented.');
-}
