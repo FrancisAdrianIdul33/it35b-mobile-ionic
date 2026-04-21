@@ -4,11 +4,31 @@ import { useInsertionEffect, useState } from 'react';
 
 const Feed: React.FC = () => {
     const games = [
-        { name: 'Pokémon Yellow' },
-        { name: 'Mega Man X' },
-        { name: 'The Legend of Zelda' },
-        { name: 'Pac-man' },
-        { name: 'Super Mario World' },
+        {
+            name: 'Pokémon Yellow',
+            img: "https://www.nintendo.com/eu/media/images/10_share_images/games_15/game_boy_4/H2x1_GB_PokemonYellow_enGB_image1600w.jpg",
+            des: "Catch, train, and battle Pokémon alongside Pikachu in a classic adventure."
+        },
+        {
+            name: 'Mega Man X',
+            img: "https://www.nintendo.com/eu/media/images/10_share_images/games_15/nintendo_switch_download_software_1/H2x1_NSwitchDS_MegaManXLegacyCollection_image1600w.jpg",
+            des: "Fast-paced action platformer where you fight powerful robots and upgrade abilities."
+        },
+        {
+            name: 'The Legend of Zelda',
+            img: "https://www.nintendo.com/eu/media/images/other_22/character_hubs/the_legend_of_zelda/16x9_Other_TheLegendOfZelda_Hub_image1600w.jpg",
+            des: "Explore Hyrule, solve puzzles, and defeat evil to save the kingdom."
+        },
+        {
+            name: 'Pac-man',
+            img: "https://www.nintendo.com/eu/media/images/10_share_images/games_15/nes_5/H2x1_NES_PacMan_image1600w.jpg",
+            des: "Navigate mazes, eat pellets, and avoid ghosts in this iconic arcade game."
+        },
+        {
+            name: 'Super Mario World',
+            img: "https://www.nintendo.com/eu/media/images/10_share_images/games_15/super_nintendo_5/H2x1_SNES_SuperMarioWorld.jpg",
+            des: "Jump, run, and explore colorful worlds to rescue Princess Peach with Yoshi."
+        },
     ]
 
     const [searchText, setSearchText] = useState('');
@@ -29,15 +49,11 @@ const Feed: React.FC = () => {
                 <IonList>
                     {games.map((item, index) => (
                         <IonCardHeader>
-                            <img alt="Card Image" src="https://www.nintendo.com/eu/media/images/10_share_images/games_15/game_boy_4/H2x1_GB_PokemonYellow_enGB_image1600w.jpg" />
+                            <img alt="Card Image" src={item.img || "https://ionicframework.com/docs/img/demos/card-media.png"} />
                             <IonCardHeader>
                                 <IonCardTitle>{item.name}</IonCardTitle>
-                                <IonCardSubtitle>card subtitle</IonCardSubtitle>
-                                <IonCardContent>
-                                    Keep close to Nature's heart... and break clear away, once in awhile, and climb a mountain or spend a week in the woods. Wash your spirit clean.
-                                </IonCardContent>
+                                <IonCardSubtitle>{item.des}</IonCardSubtitle>
                             </IonCardHeader>
-
 
 
                             <IonCardContent>
@@ -66,7 +82,7 @@ const Feed: React.FC = () => {
                             </IonCardContent>
                         </IonCardHeader>
 
-                    ))};
+                    ))}
                 </IonList>
             </IonContent>
         </IonPage>
